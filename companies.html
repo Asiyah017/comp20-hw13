@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<meta charset = "utf-8">
+		<title> Companies </title>
+
+		<style type="text/css">
+
+		</style>
+
+		<script type="text/javascript"
+		src = "https://companiesasiyah.herokuapp.com/"></script>
+
+	</head>
+
+	<body>
+		
+		<h1> <b> Companies.co </b> </h1>
+
+		<p> Find Companies by name or Ticker </p>
+
+		<form>
+
+			<label for = "user_input"> <b> Name or Ticker </b> </label> <br />
+			<input type = "text" id = "user_input" name = "user_input"> <br />
+
+			<label for = "by_name"> By name: </label>
+			<input type = "radio" id = "by_name" name = "user_choice" value = "Company">
+
+			<label for="by_ticker">or by ticker: </label>
+            <input type="radio" id="by_ticker" name="user_choice" value="Ticker"><br>
+
+            <button type = "button" 
+            onclick = "search()"> Find! </button> <br>
+
+		</form>
+
+		<h3> Results </h3>
+		<p id = "result">
+
+		</p>
+
+		<script type="text/javascript">
+			
+			function search(){
+				var str_input = document.getElemenyById("user_input").value
+				var radio_input = document.getElementByName("user_choice");
+
+				for ( i = 0; i < radio_input.length; i++){
+					if (radio_input[i].checked){
+						document.getElemenyById("result").innerHTML += find_company(str_input, radio_input[i].value)
+					}
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

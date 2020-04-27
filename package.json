@@ -1,0 +1,23 @@
+{
+  "name": "Companies",
+  "version": "1.0.0",
+  "description": "node app ",
+  "main": "companies_find.js",
+  "scripts": {
+    "start": "node companies_find.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Asiyah Mumuney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://git.heroku.com/companiesasiyah.git"
+  },
+  "homepage": "https://git.heroku.com/companiesasiyah.git",
+  "dependencies": {
+    "mongodb": "^3.5.6",
+    "node": "^14.0.0"
+  }
+}
